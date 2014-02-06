@@ -1,0 +1,88 @@
+\newcount\draft\draft=1 % set to 0 for submission or publication
+\newcount\cameraready\cameraready=0
+
+\documentclass[9pt,parskip=full]{article}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\DeclareGraphicsExtensions{.pdf,.jpg,.png}
+\graphicspath{{./figs/}}
+
+\usepackage{listings}
+\lstset{
+    language=C,
+    emphstyle=\bfseries,
+    basicstyle=\ttfamily\small,
+    aboveskip=1mm plus 1mm minus 1mm,
+    belowskip=1mm plus 1mm minus 1mm,
+    mathescape=true,
+    xleftmargin=\parindent,
+}
+\newcommand{\lil}{\lstinline}
+
+
+\title{{\em netcat}: Improvising with Computer Networks}
+\author{David Balatero and Brandon Lucia}
+%\authorinfo{Anonymous for Submission}{}
+\date{}
+
+\newcommand{\term}[1]{\emph{#1}}
+
+\begin{document}
+
+\special{papersize=8.5in,11in}
+\setlength{\pdfpageheight}{\paperheight}
+\setlength{\pdfpagewidth}{\paperwidth}
+
+\maketitle
+
+\abstract{
+
+We have developed a system that examines arbitrary network communication
+between arbitrary computers and chooses how to play music corresponding to
+those communications in real time.  We identify several key attributes of
+network communication, focusing on their origin and destination, the type of
+message ({\em i.e.}, port), and the timing of communications.  Given a
+particular communication between computers, our system makes improvisational
+decisions based on the timing of messages to determine when notes are played,
+based on the type of message to determine the voice of the note, and based on
+the origin and destination to determine the pitch of the note. 
+\\[12pt] 
+Our system participates in improvisation in two ways:
+\\[3pt]
+\begin{enumerate}
+
+\item{{\bf As an improviser:} the system passively listens to naturally occurring
+network communication to make improvisational decisions.}
+
+\item{{\bf As an instrument:} a person can create network traffic in real time,
+by taking specific actions -- {\em e.g.}, browsing the Web, checking email,
+using low-level network communication software, {\em etc.} -- that the system
+uses to make improvisational decisions.\\[3pt]}
+
+\end{enumerate}
+Human improvisers can improvise with the system by playing it as an instrument
+or by playing along with it using conventional instruments.  We have composed
+an improvisational piece of music called {\em netcat} that uses our system. The
+piece incorporates human improvisers on conventional instruments playing
+alongside our system.  Our system improvises by generating improvised music
+from both passive and human-curated network traffic. {\em netcat} illustrates
+that computers, a pervasive form of technology, do, indeed, improvise. The
+piece further explores humans' interactions with technology that
+collaboratively create improvised music.    
+\\[12pt] 
+We perform {\em netcat} by using computers to send our system live Internet
+traffic, letting our system passively observe naturally occurring communication
+between multiple networked computers, and human performers playing cello,
+synthesizer, and drums. We are prepared to travel to Prague, perform the piece,
+and facilitate discussion on computers, technology and improvisation, and
+musical human-computer interaction in general at IAB 2014.
+}
+
+
+%\bibliographystyle{abbrv}
+%\bibliography{harvsim}
+
+
+
+\end{document}
+
